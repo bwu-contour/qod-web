@@ -1,5 +1,6 @@
 import pytest
 import requests
+import platform
 
 ENDPOINT = "http://localhost:8080"
   
@@ -10,6 +11,8 @@ def test_get_random_quote():
     else:
         response = requests.get(ENDPOINT + "/random")
     assert response.status_code == 200
+    
+    print("This request is being served by server: " + platform.node())
     
     #data = response.json();
     #print(data)
