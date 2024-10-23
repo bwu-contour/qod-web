@@ -14,4 +14,4 @@ def test_get_random_quote():
     
     print("This request is being served by server: " + platform.node())
     
-    print(response.text)
+    #print(response.text)
