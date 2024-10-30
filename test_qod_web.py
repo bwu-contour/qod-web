@@ -10,8 +10,9 @@ def test_get_random_quote():
         response = requests.get(ENDPOINT + "/random", verify=False)
     else:
         response = requests.get(ENDPOINT + "/random")
-    assert response.status_code == 200
     
     print("This request is being served by server: " + platform.node())
     
     #print(response.text)
+    
+    assert response.status_code == 200
