@@ -1,6 +1,5 @@
 import pytest
 import requests
-import platform
 
 ENDPOINT = "http://localhost:8080"
   
@@ -10,8 +9,6 @@ def test_get_random_quote():
         response = requests.get(ENDPOINT + "/random", verify=False)
     else:
         response = requests.get(ENDPOINT + "/random")
-    
-    print("This request is being served by server: " + platform.node())
     
     #print(response.text)
     
